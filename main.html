@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>New Tab</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width">
+        <style type="text/css">
+            body {
+                margin:0;
+                height:100%;
+                font-family: "HelveticaNeue-Medium", "Helvetica Neue Medium", "Helvetica Neue", Helvetica, Arial, sans-serif;
+            }
+
+            #background {
+                position: absolute;
+                top:0;
+                left:0;
+                right:0;
+                bottom:0;
+                background-repeat: no-repeat;
+                background-position: center center;
+                background-size: cover;
+            }
+
+            #clock {
+                position:absolute;
+                top:10px;
+                left:10px;
+                color:#FFF;
+            }
+
+            #todo {
+                position:absolute;
+                overflow: hidden;
+                bottom:0;
+                right:0;
+                opacity:1;
+                width:300px;
+            }
+            #todo .todo_header{
+                font-size: 24px;
+                color: rgba(255,255,255,0.8);
+            }
+            #todo .todo_body {
+                background: rgba(0,0,0,0.5);
+                opacity: 1;
+            }
+            #todo .todo_body .todo_list {
+                padding:15px;
+                list-style: none;
+                color:#FFF;
+                font-size: 15px;
+            }
+            #todo .todo_body .todo_remove {
+                float:right;
+                text-decoration: none;
+                color:gray;
+            }
+            #todo .todo_body input {
+                background:none;
+                margin-left:10px;
+                border:0;
+                color:#FFF;
+                font-size: 15px;
+                outline-width: 0;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="background"></div>
+        <div id="clock" class="clock_wrap"></div>
+        <div id="todo" class="todo_wrap">
+            <div class="todo_header">
+                <span class="todo_count"></span> Things To Do
+            </div>
+            <div class="todo_body">
+                <ul class="todo_list">
+                </ul>
+                <div class="todo_input_wrap">
+                    <input type="text" placeholder="things to do" class="todo_input" />
+                </div>
+            </div>
+        </div>
+        <script src="js/jquery-2.1.1.min.js"></script>
+        <script src="js/main.js"></script>
+        <script src="js/todo.js"></script>
+        <script src="js/background.js"></script>
+        <script src="js/clock.js"></script>
+    </body>
+</html>
